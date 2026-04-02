@@ -1,18 +1,22 @@
 plugins {
-    id 'net.fabricmc.fabric-loom' version '1.7-SNAPSHOT'
+    id 'net.fabricmc.fabric-loom' version '1.9-SNAPSHOT'
+    id 'maven-publish'
 }
 
-version = '1.0.0'
-group = 'net.wurstclient'
+version = project.mod_version
+group = project.maven_group
 
+base {
+    archivesName = project.archives_base_name
+}
+
+fabricApi {
+    configureDataGeneration()
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:1.21.1"
-    mappings "net.fabricmc:yarn:1.21.1+build.3:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.15.11"
-}
-
-// This tells the factory to ignore the 'unpick' tool that is crashing
-loom {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
