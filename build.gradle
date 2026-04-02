@@ -1,17 +1,33 @@
-plugins {
-    id 'net.fabricmc.fabric-loom' version '1.7-SNAPSHOT'
+buildscript {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.fabricmc:fabric-loom:1.15'
+    }
 }
+
+apply plugin: 'net.fabricmc.fabric-loom'
+apply plugin: 'maven-publish'
+
 version = '7.45'
 group = 'net.wurstclient'
 base { archivesName = 'Wurst-Mace-Final' }
-java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
 repositories {
     mavenCentral()
-    maven { url 'https://maven.fabricmc.net/' }
+    maven { url = 'https://maven.fabricmc.net/' }
 }
+
 dependencies {
-    minecraft 'com.mojang:minecraft:1.21.1'
-    mappings loom.officialMojangMappings()
-    modImplementation 'net.fabricmc:fabric-loader:0.16.10'
-    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.104.0+1.21.1'
+    minecraft 'com.mojang:minecraft:26.1'
+    modImplementation 'net.fabricmc:fabric-loader:0.18.4'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.104.0+26.1'
 }
