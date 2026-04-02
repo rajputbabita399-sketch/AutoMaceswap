@@ -1,14 +1,14 @@
 package net.wurstclient.hacks;
 
-import net.minecraft.class_1268;
-import net.minecraft.class_1297;
-import net.minecraft.class_1309;
-import net.minecraft.class_1743;
-import net.minecraft.class_1799;
-import net.minecraft.class_1835;
-import net.minecraft.class_310;
+import net.minecraft.net.minecraft.util.Hand;
+import net.minecraft.net.minecraft.entity.Entity;
+import net.minecraft.net.minecraft.entity.LivingEntity;
+import net.minecraft.net.minecraft.item.MaceItem;
+import net.minecraft.net.minecraft.item.ItemStack;
+import net.minecraft.net.minecraft.item.SwordItem;
+import net.minecraft.net.minecraft.client.MinecraftClient;
 import net.wurstclient.Category;
-import net.wurstclient.hack.Hack;
+import net.wurstclient.Hack;
 
 public class TriggerBotHack extends Hack {
 
@@ -16,9 +16,9 @@ public class TriggerBotHack extends Hack {
         super("TriggerBot");
     }
 
-    private void performAttack(class_1297 target) {
-        class_310 mc = class_310.method_1551();
-        if (!(target instanceof class_1309)) return;
-        mc.field_1724.method_6104(class_1268.field_5808);
+    private void performAttack(net.minecraft.entity.Entity target) {
+        net.minecraft.client.MinecraftClient mc = net.minecraft.client.MinecraftClient.method_1551();
+        if (!(target instanceof net.minecraft.entity.LivingEntity)) return;
+        mc.field_1724.method_6104(net.minecraft.util.Hand.field_5808);
     }
 }
