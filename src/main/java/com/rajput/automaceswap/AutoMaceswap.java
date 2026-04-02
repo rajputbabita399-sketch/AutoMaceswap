@@ -8,3 +8,4 @@ public class AutoMaceswap implements ModInitializer {
         System.out.println("AutoMaceswap is ready for Wurst integration!");
     }
 }
+// Force build refresh
