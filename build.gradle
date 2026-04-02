@@ -1,15 +1,7 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.fabricmc.net/' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'net.fabricmc:fabric-loom:1.7.3'
-    }
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.15.0-alpha.6'
+    id 'maven-publish'
 }
-
-apply plugin: 'net.fabricmc.fabric-loom'
-apply plugin: 'maven-publish'
 
 version = '7.45'
 group = 'net.wurstclient'
@@ -22,8 +14,8 @@ java {
 }
 
 repositories {
-    mavenCentral()
     maven { url = 'https://maven.fabricmc.net/' }
+    mavenCentral()
 }
 
 dependencies {
