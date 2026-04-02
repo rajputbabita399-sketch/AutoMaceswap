@@ -1,0 +1,34 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.wurstclient</groupId>
+    <artifactId>triggerbot</artifactId>
+    <version>1.0</version>
+    <repositories>
+        <repository>
+            <id>wurst-maven</id>
+            <url>https://maven.wurstclient.net/</url>
+        </repository>
+        <repository>
+            <id>fabric-maven</id>
+            <url>https://maven.fabricmc.net/</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>net.wurstclient</groupId>
+            <artifactId>wurst-client</artifactId>
+            <version>7.53</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.fabricmc</groupId>
+            <artifactId>intermediary</artifactId>
+            <version>1.21.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+</project>
