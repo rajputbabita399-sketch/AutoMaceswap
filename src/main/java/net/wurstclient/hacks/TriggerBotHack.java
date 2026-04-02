@@ -1,14 +1,14 @@
 package net.wurstclient.hacks;
 
-import net.minecraft.net.minecraft.util.Hand;
-import net.minecraft.net.minecraft.entity.Entity;
-import net.minecraft.net.minecraft.entity.LivingEntity;
-import net.minecraft.net.minecraft.item.MaceItem;
-import net.minecraft.net.minecraft.item.ItemStack;
-import net.minecraft.net.minecraft.item.SwordItem;
-import net.minecraft.net.minecraft.client.MinecraftClient;
+import net.minecraft.util.Hand;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.MaceItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
+import net.minecraft.client.MinecraftClient;
 import net.wurstclient.Category;
-import net.wurstclient.Hack;
+import net.wurstclient.hacks.Hack;
 
 public class TriggerBotHack extends Hack {
 
