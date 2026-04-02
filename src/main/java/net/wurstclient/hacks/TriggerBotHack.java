@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.client.MinecraftClient;
 import net.wurstclient.Category;
-import net.wurstclient.hacks.Hack;
+import net.wurstclient.Hack;
 
 public class TriggerBotHack extends Hack {
 
