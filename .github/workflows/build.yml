@@ -1,26 +1,19 @@
 name: Build Mod
-on: [push]
+on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK 21
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           java-version: '21'
-          distribution: 'temurin'
-      - name: Cache Gradle
-        uses: actions/cache@v4
+          distribution: 'microsoft'
+      - name: Validate Gradle Wrapper
+        uses: gradle/actions/wrapper-validation@v4
+      - name: Build with Gradle
+        uses: gradle/actions/setup-gradle@v4
         with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-      - name: Make Executable
-        run: chmod +x gradlew
-      - name: Build
-        run: ./gradlew build --stacktrace
-      - name: Upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: MaceSwap-1.21.1
-          path: build/libs/*.jar
+          arguments: build
