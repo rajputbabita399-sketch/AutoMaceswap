@@ -17,5 +17,4 @@ dependencies {
 
 // This tells the factory to ignore the 'unpick' tool that is crashing
 loom {
-    unpickLogging = false
 }
