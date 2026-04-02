@@ -7,6 +7,7 @@ targetCompatibility = JavaVersion.VERSION_21
 
 repositories {
     maven { url = "https://maven.wurstclient.net/" }
+    maven { url = "https://jitpack.io" }
 }
 
 dependencies {
@@ -15,5 +16,5 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:0.16.10"
     
     // This adds the Wurst API so your TriggerBotHack can compile
-    modImplementation "net.wurstclient:wurst-api:v1.0"
+    modImplementation "com.github.Wurst-Imperium:Wurst7-API:master-SNAPSHOT"
 }
