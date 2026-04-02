@@ -1,1 +1,1 @@
-{ "schemaVersion": 1, "id": "automaceswap", "version": "1.0.0", "name": "AutoMace", "environment": "client", "entrypoints": { "main": ["com.rajput.automaceswap.AutoMaceswap"] }, "mixins": ["automaceswap.mixins.json"], "depends": { "fabricloader": ">=0.16.10", "minecraft": "26.1" } }
+{ "schemaVersion": 1, "id": "automaceswap", "version": "1.0.0", "name": "AutoMace", "environment": "client", "entrypoints": { "main": ["com.rajput.automaceswap.AutoMaceswap"] }, "mixins": ["automaceswap.mixins.json"], "depends": { "fabricloader": ">=0.18.4", "minecraft": "26.1" } }

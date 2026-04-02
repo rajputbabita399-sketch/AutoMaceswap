@@ -1,1 +1,1 @@
-{ "required": true, "package": "com.rajput.automaceswap.mixin", "compatibilityLevel": "JAVA_21", "client": ["MaceSwapMixin"] }
+{ "required": true, "package": "com.rajput.automaceswap.mixin", "compatibilityLevel": "JAVA_25", "client": ["MaceSwapMixin"] }
